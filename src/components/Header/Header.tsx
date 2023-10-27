@@ -1,7 +1,9 @@
-import { Autocomplete, Stack, TextField } from '@mui/material';
+import { Stack, TextField } from '@mui/material';
 import { FunctionComponent } from 'react';
+import HeaderStyles from './HeaderStyles';
 import { IHeader } from './IHeader';
 
+const {AutoCompleteStyles} = HeaderStyles();
 const Header:FunctionComponent<IHeader> = ({listOptions, label}) => {  
   return (
     <Stack>
@@ -9,7 +11,7 @@ const Header:FunctionComponent<IHeader> = ({listOptions, label}) => {
         <Stack>
 
         </Stack>
-        <Autocomplete
+        <AutoCompleteStyles
           freeSolo
           id="free-solo-2-demo"
           disableClearable
@@ -18,7 +20,7 @@ const Header:FunctionComponent<IHeader> = ({listOptions, label}) => {
           }
           renderInput={(params) => (
             <TextField
-            {...params}            
+              {...params}            
               label={label}
               InputProps={{
                 ...params.InputProps,

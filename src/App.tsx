@@ -5,7 +5,9 @@ import Layout from "./components/Layout";
 function App() {
 
   return (
-    <Stack sx={{maxWidth: "85%", padding: "15px 0px", margin: "auto"}}>
+    <Stack sx={{maxWidth: "85%", 
+      padding: "15px 0px", 
+      margin: "auto"}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>            
